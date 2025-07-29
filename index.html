@@ -26,11 +26,18 @@
           </div>
         </div>
 
-        <div class="rounded-[12px] grid grid-cols-2 p-1 bg-[#efeef3] h-[54px]">
+        <div
+          class="rounded-[12px] grid grid-cols-2 p-1 bg-[#efeef3] h-[54px] relative"
+        >
+          <div
+            data-indicator
+            class="absolute top-1 left-1 h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-[8px] bg-white transition-all duration-300"
+          ></div>
+
           <button
             data-id="0"
             data-active="true"
-            class="rounded-[8px] h-full font-medium text-[18px] cursor-pointer text-[rgba(0,0,0,0.6)] data-[active=true]:bg-white data-[active=true]:text-[rgba(0,0,0,0.9)]"
+            class="relative z-1 rounded-[8px] h-full font-medium text-[18px] cursor-pointer text-[rgba(0,0,0,0.6)] data-[active=true]:text-[rgba(0,0,0,0.9)] delay-150"
           >
             Купили
           </button>
@@ -38,7 +45,7 @@
           <button
             data-id="1"
             data-active="false"
-            class="rounded-[8px] h-full font-medium text-[18px] cursor-pointer text-[rgba(0,0,0,0.6)] data-[active=true]:bg-white data-[active=true]:text-[rgba(0,0,0,0.9)] transition-colors"
+            class="relative z-1 rounded-[8px] h-full font-medium text-[18px] cursor-pointer text-[rgba(0,0,0,0.6)] data-[active=true]:text-[rgba(0,0,0,0.9)] transition-colors delay-150"
           >
             Заработали
           </button>

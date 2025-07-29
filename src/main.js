@@ -2,8 +2,9 @@ import "./style.css";
 
 const buttons = document.querySelectorAll("button[data-id]");
 const tabs = document.querySelectorAll("[data-tab-id]");
+const indicator = document.querySelector("[data-indicator]");
 
-buttons.forEach((button) => {
+buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
     const id = button.getAttribute("data-id");
 
@@ -20,6 +21,11 @@ buttons.forEach((button) => {
     const targetTab = document.querySelector(`[data-tab-id="${id}"]`);
     if (targetTab) {
       targetTab.setAttribute("data-active", "true");
+    }
+
+    // Двигаем индикатор
+    if (indicator) {
+      indicator.style.transform = `translateX(${index * 100}%)`;
     }
   });
 });
